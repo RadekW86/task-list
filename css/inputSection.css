@@ -36,3 +36,9 @@
     border: 1px solid #eee;
     margin: 5px;
 }
+
+@media (max-width: 767px) {
+    .form__addButton {
+        flex-grow: 1;
+    } 
+}

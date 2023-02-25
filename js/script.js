@@ -6,6 +6,7 @@
         addNewTask();
         removeTask();
         markDone();
+        document.querySelector(".js-formInput").focus();
     };
 
     const render = () => {
@@ -13,9 +14,22 @@
         for (const i of tasksTable) {
             htmlString += `
             <li class = "outputSection__listItem">
-            <div><button class = "outputSection__done js-markDone">${i.done ? "✔️" : "&#160;"}</button></div>
-            <div class = "outputSection__item${i.done ? " outputSection__list--done" : ""}">${i.content}</div>
-            <div><button class = "outputSection__remove js-remove">🗑️</button></div>
+             <div>
+              <button class = "
+              outputSection__button 
+              outputSection__button--doneBox 
+              js-markDone
+              ">
+              ${i.done ? "✔️" : "&#160;"}</button>
+             </div>
+             <div class = "outputSection__item${i.done ? " outputSection__list--done" : ""}">${i.content}</div>
+             <div>
+              <button class = "
+              outputSection__button 
+              outputSection__button--remove 
+              js-remove
+              ">🗑️</button>
+             </div>
             </li>
             `;
         };

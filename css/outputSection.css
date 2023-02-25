@@ -27,13 +27,16 @@
     text-decoration: line-through;
 }
 
-.outputSection__done {
-    background-color: green;
+.outputSection__button {
     color: white;
     border: none;
     width: 30px;
     height: 30px;
     margin: 5px;
+}
+
+.outputSection__button--doneBox {
+    background-color: green;
 }
 
 .outputSection__item {
@@ -44,11 +47,7 @@
 }
 
 
-.outputSection__remove {
+.outputSection__button--remove {
     background-color: crimson;
-    color: white;
-    border: none;
-    width: 30px;
-    height: 30px;
-    margin: 5px;
+
 }
