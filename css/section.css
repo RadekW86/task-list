@@ -1,9 +1,9 @@
-.inputSection {
+.section {
     background-color: white;
 
 }
 
-.inputSection__label {
+.section__label {
     font-weight: 700;
     font-size: 18px;
     border-bottom: 1px solid #ddd;
@@ -41,4 +41,46 @@
     .form__addButton {
         flex-grow: 1;
     } 
+}
+
+.section__list {
+    list-style: none;
+    margin-left: -15px;
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section__listItem {
+    display: flex;
+    flex-direction: row;
+}
+
+.section__list--done {
+    text-decoration: line-through;
+}
+
+.section__button {
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+
+.section__button--doneBox {
+    background-color: green;
+}
+
+.section__item {
+    font-weight: 400;
+    flex-grow: 1;
+    margin: 10px;
+    word-break: break-word;
+}
+
+
+.section__button--remove {
+    background-color: crimson;
+
 }
