@@ -12,10 +12,10 @@
         let htmlString = "";
         for (const i of tasksTable) {
             htmlString += `
-            <li${i.done ? " class = \"outputSection__list--done\"" : ""}>
-            <button class = "js-markDone">${i.done ? "✔️" : "◻️"}</button>
-            ${i.content}
-            <button class = "js-remove">🗑️</button>
+            <li class = "outputSection__listItem">
+            <div><button class = "outputSection__done js-markDone">${i.done ? "✔️" : "&#160;"}</button></div>
+            <div class = "outputSection__item${i.done ? " outputSection__list--done" : ""}">${i.content}</div>
+            <div><button class = "outputSection__remove js-remove">🗑️</button></div>
             </li>
             `;
         };

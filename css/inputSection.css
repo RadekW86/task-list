@@ -1,0 +1,38 @@
+.inputSection {
+    background-color: white;
+
+}
+
+.inputSection__label {
+    font-weight: 700;
+    font-size: 18px;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+.form {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form__input {
+    padding: 10px;
+    margin: 5px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    flex-grow: 1;
+    }
+
+
+.form__addButton {
+    background-color: teal;
+    color: #eee;
+    font-weight: 100;
+    padding: 10px;
+    border: 1px solid #eee;
+    margin: 5px;
+}
