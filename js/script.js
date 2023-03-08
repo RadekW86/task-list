@@ -13,23 +13,11 @@
         let htmlString = "";
         for (const i of tasksTable) {
             htmlString += `
-            <li class = "section__listItem">
-             <div>
-              <button class = "
-              section__button 
-              section__button--doneBox 
-              js-markDone
-              ">
+            <li class = "list__item">
+              <button class = "list__button list__button--doneBox js-markDone">
               ${i.done ? "✔️" : "&#160;"}</button>
-             </div>
-             <div class = "section__item${i.done ? " section__list--done" : ""}">${i.content}</div>
-             <div>
-              <button class = "
-              section__button 
-              section__button--remove 
-              js-remove
-              ">🗑️</button>
-             </div>
+             <div class = "list__content${i.done ? " list__content--done" : ""}">${i.content}</div>
+              <button class = "list__button list__button--remove js-remove">🗑️</button>
             </li>
             `;
         };
@@ -43,7 +31,7 @@
             event.preventDefault();
             const formInput = document.querySelector(".js-formInput").value.trim();
             if (formInput === "") { return; };
-            tasksTable.unshift({ content: formInput, });
+            tasksTable.unshift({ content: formInput });
             bindingEvents();
             document.querySelector(".js-formInput").value = "";
         });

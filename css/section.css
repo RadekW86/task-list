@@ -1,86 +1,50 @@
 .section {
     background-color: white;
+    margin: 10px 0;
+    box-shadow: 0 0 5px #ddd;
 
 }
 
 .section__label {
-    font-weight: 700;
-    font-size: 18px;
+    font-size: 20px;
     border-bottom: 1px solid #ddd;
     padding: 20px;
-    padding-bottom: 10px;
+    margin: 0;
+}
+
+.section__body {
+    padding: 20px;
 }
 
 .form {
-    padding: 15px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 20px;
+}
+
+@media (max-width: 767px) {
+    .form {
+        grid-template-columns: 1fr;
+    } 
 }
 
 .form__input {
     padding: 10px;
-    margin: 5px;
-    font-size: 15px;
-    border: 1px solid #ddd;
-    flex-grow: 1;
+        border: 1px solid #ddd;
     }
 
 
 .form__addButton {
-    background-color: teal;
-    color: #eee;
-    font-weight: 100;
-    padding: 10px;
-    border: 1px solid #eee;
-    margin: 5px;
-}
-
-@media (max-width: 767px) {
-    .form__addButton {
-        flex-grow: 1;
-    } 
-}
-
-.section__list {
-    list-style: none;
-    margin-left: -15px;
-    margin-right: 25px;
-    display: flex;
-    flex-direction: column;
-}
-
-.section__listItem {
-    display: flex;
-    flex-direction: row;
-}
-
-.section__list--done {
-    text-decoration: line-through;
-}
-
-.section__button {
+    background-color: hsl(180, 100%, 25%);
     color: white;
+    padding: 10px;
     border: none;
-    width: 30px;
-    height: 30px;
-    margin: 5px;
 }
 
-.section__button--doneBox {
-    background-color: green;
+.form__addButton:hover {
+    background-color: hsl(180, 100%, 30%);
 }
 
-.section__item {
-    font-weight: 400;
-    flex-grow: 1;
-    margin: 10px;
-    word-break: break-word;
-}
-
-
-.section__button--remove {
-    background-color: crimson;
-
+.form__addButton:active {
+    background-color: hsl(180, 100%, 35%);
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
@@ -11,33 +11,39 @@
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="css/body.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
     <link href="css/section.css" rel="stylesheet">
+    <link href="css/list.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
     <script defer src="js/script.js"></script>
 </head>
 
 <body class="body">
-    <header class="header">
-        Task List
-    </header>
-    <section class="section">
-        <div class="section__label">Add new task</div>
-        <form class="form js-form">
-            <input class="form__input js-formInput" placeholder="What is your task?" autofocus>
-            <button class="form__addButton js-addButton">Add Task</button>
-        </form>
-    </section>
-    <section class="section">
-        <div class="section__label">Task List</div>
-        <ul class="section__list js-tasksList"></ul>
-    </section>
-
+    <main class="main">
+        <header class="header">
+            <h1 class="header__h1">Lista zadań</h1>
+        </header>
+        <section class="section">
+            <h2 class="section__label">Dodaj nowe zadanie</h2>
+            <div class="section__body">
+                <form class="form js-form">
+                    <input class="form__input js-formInput" placeholder="Co jest do zrobienia?" autofocus>
+                    <button class="form__addButton js-addButton">Dodaj zadanie</button>
+                </form>
+            </div>
+        </section>
+        <section class="section">
+            <h2 class="section__label">Lista zadań</h2>
+            <div class="section__body">
+                <ul class="list js-tasksList"></ul>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
