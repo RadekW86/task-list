@@ -1,8 +1,8 @@
 {
-    const tasksTable = [];
+    let tasksTable = [];
 
     const addNewTask = (formInput) => {
-        tasksTable.unshift({ content: formInput });
+        tasksTable = [{ content: formInput }, ...tasksTable];
     };
 
     const processInput = () => {
@@ -21,7 +21,11 @@
     };
 
     const toggleCompletion = (taskIndex) => {
-        tasksTable[taskIndex].done = !tasksTable[taskIndex].done;
+        tasksTable = [
+            ...tasksTable.slice(0, taskIndex),
+            { ...tasksTable[taskIndex], done: !tasksTable[taskIndex].done, },
+            ...tasksTable.slice(taskIndex + 1),
+        ]
     };
 
     const bindToggleEvents = () => {
@@ -35,7 +39,10 @@
     };
 
     const removeTask = (taskIndex) => {
-        tasksTable.splice(taskIndex, 1);
+        tasksTable = [
+            ...tasksTable.slice(0, taskIndex),
+            ...tasksTable.slice(taskIndex + 1),
+        ]
     };
 
     const bindRemoveEvents = () => {
